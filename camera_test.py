@@ -4,15 +4,14 @@ cap = cv2.VideoCapture(0)
 while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
-    cap.set(3, 1920)
-    cap.set(4, 1080)
-    # cv.set(cv.CV_CAP_PROP_FRAME_HEIGHT, 600)
+    cap.set(3, 960)
+    cap.set(4, 540)
 
     # Our operations on the frame come here
     # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Display the resulting frame
-    frame = horizontal_img = cv2.flip(frame, 1)
+    frame = cv2.flip(frame, 1)
     cv2.imshow('frame', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
